@@ -1,12 +1,12 @@
 :root {
   --rich-black: #050517;
-  --gunmetal: #022B3A;
+  --gunmetal: #022b3a;
   --eerie-black: #191716;
-  --prussian-blue: #102E4A;
-  --night: #0C0F0A;
-  --deep-sky-blue: #48BEFF;
-  --space-cadet: #2B2D42;
-  --shadow-sky-blue: #48BEFF33;
+  --prussian-blue: #102e4a;
+  --night: #0c0f0a;
+  --deep-sky-blue: #48beff;
+  --space-cadet: #2b2d42;
+  --shadow-sky-blue: #48beff33;
 }
 * {
   box-sizing: border-box;
@@ -21,18 +21,14 @@ body {
 }
 
 body {
-  color: #FFF;
-  background: linear-gradient(
-      to bottom,
-      var(--rich-black),
-      var(--gunmetal)
-    )
+  color: #fff;
+  background: linear-gradient(to bottom, var(--rich-black), var(--gunmetal))
     #111;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 12px;
-    border-radius: 12px;
-    height: 100vh;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 12px;
+  border-radius: 12px;
+  height: 100vh;
 }
 
 a {
@@ -44,4 +40,7 @@ a {
   html {
     color-scheme: dark;
   }
+}
+.particles {
+  border-radius: 12px;
 }
