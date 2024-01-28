@@ -1,0 +1,6 @@
+.logo {
+    display: flex;
+    padding: 4px;
+    vertical-align: middle;
+    align-items: center;
+}

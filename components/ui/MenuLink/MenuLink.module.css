@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    var(--shadow-sky-blue),
+    var(--space-cadet)
+  );
+  padding: 12px 32px;
+  width: max-content;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.container:hover {
+  transform: translateY(-4px);
+  border-bottom: 1px solid var(--deep-sky-blue);
+}

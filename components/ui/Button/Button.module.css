@@ -1,0 +1,12 @@
+.container {
+  background: linear-gradient(
+    45deg,
+    var(--deep-sky-blue),
+    var(--prussian-blue)
+  );
+  padding: 12px 24px 12px 24px;
+  text-align: center;
+  border-radius: 20px;
+  width: max-content;
+  /* border: 1px solid red; */
+}
