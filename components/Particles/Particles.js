@@ -1,5 +1,5 @@
 "use client";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
@@ -17,11 +17,22 @@ export default function Particle() {
     await console.log(container);
   }, []);
 
+  const [mobileScreenDetect, setMobileScreenDetect] = useState(false);
+  const [tabletScreenDetect, setTabletScreenDetect] = useState(false);
+  useEffect(() => {
+    if (window.visualViewport.width < 587) {
+      setMobileScreenDetect(true);
+    }
+    if (window.visualViewport.width < 1025) {
+      setTabletScreenDetect(true);
+    }
+  }, []);
+
   return (
     <Particles
       canvasClassName="particles"
-      height={520}
-      width={1480}
+      height={mobileScreenDetect ? window.visualViewport.height - 290: 520}
+      width={mobileScreenDetect ? window.visualViewport.width - 40 : 1480}
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -50,7 +61,7 @@ export default function Particle() {
           },
           modes: {
             push: {
-              quantity: 12,
+              quantity: 4,
             },
             grab: {
               distance: 200,
@@ -76,21 +87,22 @@ export default function Particle() {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 1,
             straight: false,
           },
           number: {
+            max: 200,
+            value: 200,
             density: {
               enable: true,
               area: 1500,
             },
-            value: 200,
           },
           opacity: {
             value: 1,
           },
           shape: {
-            type: "square",
+            type: "circle",
           },
           size: {
             value: { min: 1, max: 5 },

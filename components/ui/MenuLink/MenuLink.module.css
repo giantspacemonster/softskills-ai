@@ -17,3 +17,8 @@
   transform: translateY(-4px);
   border-bottom: 1px solid var(--deep-sky-blue);
 }
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .container {
+    display: none;
+  }
+}

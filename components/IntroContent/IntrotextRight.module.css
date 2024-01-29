@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.subContainer {
+  text-align: left;
+}
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .container {
+    display: block;
+  }
+  .subContainer {
+    display: flex;
+    font-size: 0.8em;
+  }
+  .subContainer p {
+    color: #aaa;
+  }
+}

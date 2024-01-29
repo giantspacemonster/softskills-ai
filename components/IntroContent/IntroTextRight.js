@@ -1,5 +1,5 @@
 import IntroTextRightSubContent from "./IntroTextRightSubContent";
-
+import styles from "./IntrotextRight.module.css";
 const desc1 = `
 Tailored to individual needs, SkillSculptorAI crafts unique learning
         paths based on data-driven insights, ensuring each subscriber receives a
@@ -15,14 +15,18 @@ Stay motivated and informed with our real-time progress tracking
 export default function IntroTextRight() {
   return (
     <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "left",
-      }}
+      className={styles.container}
     >
-      <IntroTextRightSubContent imgSrc="/Learn.svg" desc={desc1} />
-      <IntroTextRightSubContent imgSrc="/Progress.svg" desc={desc2} />
+      <IntroTextRightSubContent
+        imgSrc="/Learn.svg"
+        desc={desc1}
+        heading="Personalized Learning Paths"
+      />
+      <IntroTextRightSubContent
+        imgSrc="/Progress.svg"
+        desc={desc2}
+        heading="Real-Time Progress Tracking"
+      />
     </div>
   );
 }

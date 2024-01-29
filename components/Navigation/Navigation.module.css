@@ -12,4 +12,12 @@
   overflow: hidden;
   padding: 4px;
   transform: translateY(1px);
+  z-index: 2;
+}
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .glass {
+    width: 94vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }

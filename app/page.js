@@ -1,10 +1,15 @@
 import IntroContent from "@/components/IntroContent/IntroContent";
-import Particle from "@/components/Particles/Particles";
+import PageContainer from "@/components/ui/PageContainer/PageContainer";
+import SectionDivider from "@/components/ui/SectionDivider/SectionDivider";
+import StylizedPageSeparator from "@/components/ui/StylizedPageSeparator/StylizedPageSeparator";
 
 export default function Home() {
   return (
     <main>
       <IntroContent />
+      <SectionDivider />
+      {/* <StylizedPageSeparator /> */}
+      <PageContainer />
     </main>
   );
 }

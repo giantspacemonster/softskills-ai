@@ -1,16 +1,10 @@
 import { Share_Tech_Mono } from "next/font/google";
-
+import styles from "./IntroTextLeft.module.css";
 const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: ["400"] });
 export default function IntroTextLeft() {
   return (
     <div>
-      <p
-        className={shareTechMono.className}
-        style={{
-          fontSize: "3em",
-          textAlign: "left",
-        }}
-      >
+      <p className={`${shareTechMono.className} ${styles.mainText}`}>
         Elevate your soft skills with precision through data-driven training
       </p>
       <br />
@@ -83,10 +77,13 @@ export default function IntroTextLeft() {
           <div></div>
         </div>
       </div>
-      <p className={shareTechMono.className} style={{
-        textAlign: 'justify',
-        color: '#AAA'
-      }}>
+      <p
+        className={shareTechMono.className}
+        style={{
+          textAlign: "justify",
+          color: "#AAA",
+        }}
+      >
         Join our community of empowered learners at SkillSculptorAI, where
         subscribers delight in personalized journeys, unlocking the joy of
         mastering soft skills through engaging and effective services tailored

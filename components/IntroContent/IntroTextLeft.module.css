@@ -1,0 +1,10 @@
+.mainText {
+  font-size: 3em;
+  text-align: left;
+}
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .mainText {
+    font-size: 2em;
+    text-align: center;
+  }
+}

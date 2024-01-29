@@ -12,3 +12,8 @@
   position: absolute;
   width: 100%;
 }
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .container {
+    display: block;
+  }
+}
