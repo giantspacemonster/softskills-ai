@@ -31,7 +31,7 @@ export default function Particle() {
   return (
     <Particles
       canvasClassName="particles"
-      height={mobileScreenDetect ? window.visualViewport.height - 290: 520}
+      height={mobileScreenDetect ? window.visualViewport.height - 290 : 520}
       width={mobileScreenDetect ? window.visualViewport.width - 40 : 1480}
       id="tsparticles"
       init={particlesInit}
@@ -91,7 +91,7 @@ export default function Particle() {
             straight: false,
           },
           number: {
-            max: 200,
+            max: mobileScreenDetect ? 50 : 200,
             value: 200,
             density: {
               enable: true,
